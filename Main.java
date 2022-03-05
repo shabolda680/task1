@@ -1,27 +1,30 @@
 package com.company;
 
+
 import java.util.Scanner;
 
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во шагов:");
-        int i = in.nextInt();
-        if(i < 0){
-            System.out.println("Введите положительное число");
+class Match {
+    double x;
+    double y;
+    double z;
+    Match (double x, double y){
+        if((y+1)==0){
+            System.out.println("Введите другие числа");
         }
         else {
-        System.out.println("Введите x:");
-        int x = in.nextInt();
-        double S = 0;
-        for(var j=0;j<=i;j++){
-
-            double P =(Math.pow(x,2*j+1))/(2*j+1);
-            S= S+P;
+            z = (x+y)/(y+1);
+            System.out.println(z);
         }
+    }
 
-        System.out.println("Oтвет: " + S);
-        }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double num1 = in.nextDouble();
+        double num2 = in.nextDouble();
+        Match ope = new Match(num1, num2);
+
+
     }
 }
